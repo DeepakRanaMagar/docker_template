@@ -1,0 +1,15 @@
+{
+	"name": "Docker Template Development",
+    "dockerComposeFile": "../docker/compose.yml",
+    "service": "web",
+    "workspaceFolder": "/docker_template",
+	"features": {
+        "ghcr.io/devcontainers/features/git:1": {},
+        "ghcr.io/devcontainers/features/github-cli:1": {},
+        "ghcr.io/devcontainers/features/python:1": {
+            "version": "3.12"
+        }
+    },
+    "remoteUser": "appuser",
+	"forwardPorts": [8000, 5432, 6379]
+}

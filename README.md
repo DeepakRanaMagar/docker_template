@@ -1,1 +1,2 @@
-# docker_template
+# Docker Template
+This is a template for a Docker container that can be used to run a Python script. The Python script is located in the `src` directory. The Docker container is built using the `Dockerfile` in the root directory.
