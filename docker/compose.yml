@@ -29,8 +29,11 @@ services:
     build:
       context: ..
       dockerfile: docker/Dockerfile
+      
     volumes:
       - ..:/docker_template
+      - ~/.vscode-server:/home/appuser/.vscode-server
+
     env_file:
       - ../.env
     expose:
@@ -40,4 +43,4 @@ services:
         condition: service_healthy
       redis:
         condition: service_healthy
-    entrypoint: ./entrypoint.sh
+    entrypoint: ./entrypoint.sh --dev=true
